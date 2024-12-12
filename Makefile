@@ -16,7 +16,7 @@ DNS_SERVER=$(PROJECT_DIR)/dns_server
 # Build the main executable
 main: $(DNS_SERVER)/udp.o $(DNS_SERVER)/database.o \
 	  $(DNS_SERVER)/networking.o $(DNS_SERVER)/settings.o
-	g++ -std=c++20 -L/usr/lib -Wl,-rpath=/usr/lib \
+	g++ -std=c++20 -L/usr/local/lib -Wl,-rpath=/usr/local/lib \
 	$(DNS_SERVER)/main.cpp -o $(DNS_SERVER)/local-dns \
 	$(DNS_SERVER)/udp.o $(DNS_SERVER)/database.o \
 	$(DNS_SERVER)/networking.o $(DNS_SERVER)/settings.o \
