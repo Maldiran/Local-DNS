@@ -1,15 +1,16 @@
 [Unit]
-Description=Local dns service, defines a mapping between user defined addresses and IP from local network
-Required=network-online.target
+Description=Local DNS service, defines a mapping between user-defined addresses and IPs from the local network
+Requires=network-online.target
+After=network-online.target
 
 [Service]
 Type=simple
 User=root
-WorkingDirectory=/usr/local/local_dns
-ExecStart=/usr/local/local_dns/main.x
+WorkingDirectory=/usr/local/local-dns
+ExecStart=/usr/bin/local-dns
 Restart=always
-#StandardOutput=append:/var/log/local_dns.log
-#StandardError=inherit
+StandardOutput=append:/var/log/local-dns/log
+StandardError=append:/var/log/local-dns/log
 
 [Install]
 WantedBy=multi-user.target
