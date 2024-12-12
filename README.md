@@ -10,12 +10,14 @@ To install the application on ArchLinux simply run:
 ```sh
 $ yay -S local-dns
 ```
-If you want to build it from source
+If you want to install it manually
 ```sh
+git clone https://github.com/Maldiran/Local-DNS.git
 sudo pacman -S nlohmann-json libpcap glibc
 yay -S libcrafter-git
-cd installation
+cd Local-DNS/installation
 makepkg -si
+cd ../..
 ```
 ### Setup
 
