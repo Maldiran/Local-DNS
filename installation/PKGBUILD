@@ -10,6 +10,8 @@ makedepends=('git' 'make' 'gcc>=10' 'autoconf' 'systemd')
 source=("git+$url")
 sha256sums=('SKIP')  # Replace 'SKIP' with actual checksums for security
 
+install=local-dns.install
+
 prepare() {
     cd "$srcdir/Local-DNS"
 }
