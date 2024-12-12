@@ -10,6 +10,13 @@ To install the application on ArchLinux simply run:
 ```sh
 $ yay -S local-dns
 ```
+If you want to build it from source
+```sh
+sudo pacman -S nlohmann-json libpcap glibc
+yay -S libcrafter-git
+cd installation
+makepkg -si
+```
 ### Setup
 
 For the operating system to incorporate this into DNS resolution we need to set it up correctly. We provide one way to do so, you may be able to do it differently.
