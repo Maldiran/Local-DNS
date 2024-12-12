@@ -39,6 +39,7 @@ install:
 	mkdir -p $(DESTDIR)$(LOGS)
 	mkdir -p $(DESTDIR)$(CACHE_LOC)
 	mkdir -p $(DESTDIR)$(CONFIG_LOC)
+	mkdir -p $(DESTDIR)$(PROGRAM_LOC)
 	cp $(CONFIG)/DnsMapUserSettings.config $(DESTDIR)$(CONFIG_LOC)/DnsMapUserSettings.config
 	cp $(CONFIG)/DnsMapUser.config $(DESTDIR)$(CONFIG_LOC)/DnsMapUser.config
 	cp $(DNS_SERVER)/local-dns $(DESTDIR)$(PROGRAM_LOC)/local-dns
