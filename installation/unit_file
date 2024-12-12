@@ -1,3 +1,4 @@
+[Unit]
 Description=Local DNS service, defines a mapping between user-defined addresses and IPs from the local network
 After=network-online.target
 
